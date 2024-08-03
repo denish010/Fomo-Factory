@@ -33,8 +33,8 @@ app.prepare().then(async () => {
 
       console.log("# Running scheduler every 5 seconds #");
 
-      // const coinsData = await axios.get("http://localhost:3000/api/poll");
-      // io.emit("message", coinsData.data.data);
+      const coinsData = await axios.get("http://localhost:3000/api/poll");
+      io.emit("message", coinsData.data.data);
     });
   };
 
